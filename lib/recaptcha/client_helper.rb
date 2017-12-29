@@ -103,7 +103,7 @@ module Recaptcha
             var eles = document.getElementsByClassName('g-recaptcha');
             if (eles.length > 0) {
               var form = closestForm(eles[0]);
-              if (form) {
+              if (form && form.reportValidity()) {
                 form.submit();
               }
             }
